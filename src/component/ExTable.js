@@ -51,9 +51,8 @@ const ExTable = () => {
     setLoading(false);
   };
 
-  const handleValidateUser = async(userId) =>{
-    console.log(userId)
-    const newStatus = "approved";
+  const handleValidateUser = async(userId, action) =>{
+    let newStatus = action
     await updateUserValidationStatus(userId, newStatus)
   }
 
@@ -157,8 +156,11 @@ const ExTable = () => {
                     <TableCell>{user.username}</TableCell>
                     <TableCell>{user.validation_status}</TableCell>
                     <TableCell align="right">
-                      <Button onClick={() => handleValidateUser(user.user_id)} variant="text" color="primary">
+                      <Button onClick={() => handleValidateUser(user.user_id, 'approved')} variant="text" color="primary">
                         Verify
+                      </Button>
+                      <Button onClick={() => handleValidateUser(user.user_id, 'pending')} variant="text" color="warning">
+                        Revoke 
                       </Button>
                     </TableCell>
                   </TableRow>
