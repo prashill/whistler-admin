@@ -1,0 +1,11 @@
+{
+  "files": {
+    "main.js": "/whistler-admin/static/js/main.0b39a6a2.js",
+    "static/media/logo-dark.png": "/whistler-admin/static/media/logo-dark.c4216bce85f903bc3384.png",
+    "index.html": "/whistler-admin/index.html",
+    "main.0b39a6a2.js.map": "/whistler-admin/static/js/main.0b39a6a2.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.0b39a6a2.js"
+  ]
+}
